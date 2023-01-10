@@ -59,6 +59,9 @@ router.post("/singin", async (req, res) => {
   }
 });
 
+
+
+
 router.post("/singup", async (req, res) => {
   const { email, password, firstName, lastName, confirmPassword } = req.body;
 

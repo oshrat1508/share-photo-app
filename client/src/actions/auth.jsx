@@ -26,6 +26,7 @@ export const singin = (formData , navigate)=> async(dispatch)=>{
   export const singup = (formData , navigate)=> async(dispatch)=>{
     try{
       const {data} = await api.singUp(formData)
+      
       dispatch({type:'AUTH' ,  data})
     navigate('/')
   

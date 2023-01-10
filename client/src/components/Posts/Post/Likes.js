@@ -2,9 +2,7 @@ import React from "react";
 
 import {
   AiOutlineHeart,
-  AiFillDelete,
   AiFillHeart,
-  AiOutlineUpload,
 } from "react-icons/ai";
 
 

@@ -63,13 +63,6 @@ export default function Navbar({setShowForm ,showForm , currentId ,setSearch , s
                 </div>
               )}
             </div>
-{/*             
-            <div>
-              <span className="px-1 text-white text-[9px] font-bold  rounded-full absolute left-48 bg-[#851672]">{array.length ===0 ?null :array.length}</span>
-              <AiFillBell onClick={()=>{
-                setArray([])
-              }}  size={30} className="text-black text-2xl ml-3" />
-            </div> */}
           </div>
         ) : (
           <button

@@ -101,6 +101,7 @@ console.log(filterd);
       </div>
       <div className="text-center mt-10 font-extrabold">
         More content like this
+        
                 </div>
       <div></div>
     </>

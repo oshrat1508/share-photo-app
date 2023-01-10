@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FileBase64 from "react-file-base64";
 import { useDispatch } from "react-redux";
 import { useNavigate ,useParams } from "react-router-dom";
-import { update_user ,singin } from "../../actions/auth";
+import { update_user} from "../../actions/auth";
 import { fetchUsers } from "../../api";
 export default function EditProfile() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
@@ -16,8 +16,10 @@ export default function EditProfile() {
   });
 
   const handleClick = async() => {
-    update_user(user.results.email,editUser );
+    await update_user(user.results.email, editUser );
     const {data} =await fetchUsers()
+    const uptatedUser =  data.find(u => u._id === user.results._id )
+    localStorage.setItem('profile' , JSON.stringify({ results:uptatedUser }))
     navigate(`/profile/${user.results._id}`);
   };
 
